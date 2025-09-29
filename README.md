@@ -1,3 +1,5 @@
 # mlzc
 
-MLzoomcamp
+ml zoomcamp
+
+week 1
