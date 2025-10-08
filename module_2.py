@@ -105,7 +105,7 @@ def rmse_for_seed(seed):
     y_pred = model.predict(X_val)
     return float(np.sqrt(mean_squared_error(y_val, y_pred)))
 
-seeds = list(range(10))
+seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 scores = [rmse_for_seed(s) for s in seeds]
 
 std_val = float(np.std(scores))
