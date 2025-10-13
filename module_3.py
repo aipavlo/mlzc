@@ -50,15 +50,14 @@ df_train = df_train.drop(columns=[target])
 df_val   = df_val.drop(columns=[target])
 df_test  = df_test.drop(columns=[target])
 
-def mi(series):
-    return mutual_info_score(series, y_train)
-
-mi_scores = df_train[cat_cols].apply(mi)              # pandas.Series with MI
-mi_sorted = mi_scores.sort_values(ascending=False)
+mi_scores = {}
+for col in cat_cols:
+    mi = mutual_info_score(y_train, df_train[col])
+    mi_scores[col] = round(mi, 2)
 
 print("q3:")
-print(mi_sorted)
-# lead_source = 0.027719
+print(mi_scores)
+# lead_source: 0.03
 
 # === Q4
 features = cat_cols + num_cols
