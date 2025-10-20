@@ -16,7 +16,6 @@ df[categorical_features] = df[categorical_features].fillna("NA")
 
 full_train_df, test_df = train_test_split(df, test_size=0.2, random_state=1)
 train_df, val_df = train_test_split(full_train_df, test_size=0.25, random_state=1)
-len(train_df), len(val_df), len(test_df)
 
 target = "converted"
 features = numerical_features + categorical_features
