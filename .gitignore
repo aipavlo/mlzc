@@ -3,3 +3,5 @@ data-files
 answers
 module_5/__pycache__
 module_5/.venv
+module_9/hair_classifier_v1.onnx
+module_9/hair_classifier_v1.onnx.data
